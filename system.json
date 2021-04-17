@@ -48,6 +48,6 @@
   "primaryTokenAttribute": "resources.vie",
   "secondaryTokenAttribute": "resources.fatigue",
   "url": "https://github.com/Deizama/faralor",
-  "manifest": "https://github.com/Deizama/faralor/blob/main/system.json",
+  "manifest": "https://raw.githubusercontent.com/Deizama/faralor/main/system.json",
   "download": "https://github.com/Deizama/faralor/archive/refs/heads/main.zip"
 }
