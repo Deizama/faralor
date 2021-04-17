@@ -2,7 +2,7 @@
   "name": "faralor",
   "title": "Monde de Faralor",
   "description": "Le monde de Faralor enfin sur Foundry Virtual Tabletop :O",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "templateVersion": 2,
   "author": "Dudule Company",
   "scripts": [
@@ -18,27 +18,27 @@
   ],
   "packs": [
     {
-      "name": "monsters",
-      "label": "Monsters",
-      "system": "mysystem",
-      "module": "mysystem",
-      "path": "packs/monsters.db",
+      "name": "monstres",
+      "label": "Monstres",
+      "system": "faralor",
+      "module": "faralor",
+      "path": "packs/monstres.db",
       "entity": "Actor"
     },
     {
-      "name": "items",
-      "label": "Items",
-      "system": "mysystem",
-      "module": "mysystem",
-      "path": "packs/items.db",
+      "name": "objets",
+      "label": "Objets",
+      "system": "faralor",
+      "module": "faralor",
+      "path": "packs/objets.db",
       "entity": "Item"
     }
   ],
   "languages": [
     {
       "lang": "fr",
-      "name": "Français",
-      "path": "lang/efr.json"
+      "name": "Francais",
+      "path": "lang/fr.json"
     }
   ],
   "socket": false,

@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": [ "hero", "pawn", "villain" ],
+    "types": [ "PJ", "pion", "grand mechant" ],
     "templates": {
       "background": {
         "biography": "",
