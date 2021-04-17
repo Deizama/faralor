@@ -47,7 +47,7 @@
   "gridUnits": "m",
   "primaryTokenAttribute": "resources.vie",
   "secondaryTokenAttribute": "resources.fatigue",
-  "url": "https://your/hosted/system/repo/",
-  "manifest": "https://your/hosted/system/repo/system.json",
-  "download": "https://your/packaged/download/archive.zip"
+  "url": "https://github.com/Deizama/faralor",
+  "manifest": "https://github.com/Deizama/faralor/blob/main/system.json",
+  "download": "https://github.com/Deizama/faralor/archive/refs/heads/main.zip"
 }
