@@ -1,0 +1,110 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+    {{!-- Sheet Header --}}
+    <header class="sheet-header flexrow">
+        <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
+
+        <section class="header-details flexrow">
+            <h1 class="charname">
+                <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'DND5E.Name' }}"/>
+            </h1>
+
+            <aside class="header-exp flexcol">
+                <div class="charlevel" title="{{multiclassLabels}}">
+                    <label>{{ localize "DND5E.Level" }} {{data.details.level}}</label>
+                    <span class="levels">{{classLabels}}</span>
+                </div>
+
+                {{#unless disableExperience}}
+                <div class="experience flexrow">
+                    <input name="data.details.xp.value" type="text" value="{{data.details.xp.value}}" placeholder="0" data-dtype="Number"/>
+                    <span class="sep">/</span>
+                    <span class="max">{{data.details.xp.max}}</span>
+                </div>
+                <div class="xpbar">
+                    <span class="bar" style="width: {{data.details.xp.pct}}%"></span>
+                </div>
+                {{/unless}}
+            </aside>
+
+            {{!-- Character Summary --}}
+            <ul class="summary flexrow">
+                <li>
+                    <input type="text" name="data.details.race" value="{{data.details.race}}" placeholder="Race"/>
+                </li>
+                <li>
+                    <input type="text" name="data.details.alignement" value="{{data.details.alignement}}" placeholder="Alignement"/>
+                </li>
+				<li>
+                    <input type="number" name="data.details.reputation" value="{{data.details.reputation}}" placeholder="Reputation personnelle"/>
+                </li>
+                <li>
+                    <input type="text" name="data.details.divinite" value="{{data.details.divinite}}" placeholder="Divinité"/>
+                </li>
+				<li>
+                    <input type="text" name="data.details.reputationdivine" value="{{data.details.reputationdivine}}" placeholder="Reputation divine"/>
+                </li>
+            </ul>
+
+            {{!-- Header Attributes --}}
+            <ul class="attributes flexrow">
+                <li class="attribute health">
+                    <h4 class="attribute-name box-title">"Points de vie"</h4>
+                    <div class="attribute-value multiple">
+                        <input name="data.attributes.hp.value" type="text" value="{{data.attributes.hp.value}}" placeholder="0" data-dtype="Number"/>
+                        <span class="sep"> / </span>
+                        <input name="data.attributes.hp.max" type="text" value="{{data.attributes.hp.max}}" placeholder="6D6r + 6D4r + 6 * Endurance" data-dtype="Number"/>
+                    </div>
+                    <footer class="attribute-footer">
+                        <span>"hp max par niveau :"</span>
+                        <input name="data.attributes.hp.hpmaxniveau" type="text" class="hpmaxniveau" placeholder="Endurance +2"
+                               value="{{data.attributes.hp.hpmaxniveau}}" data-dtype="Number"/>
+                    </footer>
+                </li>
+
+                <li class="attribute">
+                    <h4 class="attribute-name box-title">"Régénération"</h4>
+                    <div class="attribute-value multiple">
+                        <label class="hit-dice">{{data.attributes.regbase}} <span class="sep"> / </span> {{data.attributes.regrepos}}</label>
+                    </div>
+                    <footer class="attribute-footer">
+                        <a class="rest regen-base">"Base"</a>
+                        <a class="rest regen-repos">"Repos"</a>
+                    </footer>
+                </li>
+
+                <li class="attribute">
+                    <h4 class="attribute-name box-title">Fatigue</h4>
+                    <div class="attribute-value">
+                        <input name="data.attributes.ac.fatigue" type="number" value="{{data.attributes.ac.fatigue}}" placeholder="0"/>
+                    </div>
+                    <div class="attribute-value">
+                        <input name="data.attributes.ac.fatiguemax" type="number" value="{{data.attributes.ac.fatiguemax}}" placeholder="Endurance x2 + 4"/>
+                    </div>
+                </li>
+
+                <li class="attribute initiative">
+                    <h4 class="attribute-name box-title rollable" data-action="rollInitiative">Initiative</h4>
+                    <div class="attribute-value">
+                        <span>{{numberFormat data.attributes.init.total decimals=0 sign=true}}</span>
+                    </div>
+                    <footer class="attribute-footer">
+                        <span>{{ localize "DND5E.Modifier" }}</span>
+                        <input name="data.attributes.init.value" type="text" data-dtype="Number" placeholder="0"
+                               value="{{numberFormat data.attributes.init.value decimals=0 sign=true}}"/>
+                    </footer>
+                </li>
+            </ul>
+        </section>
+    </header>
+
+    {{!-- Character Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item active" data-tab="attributes">"Caractéristiques"</a>
+        <a class="item" data-tab="inventory">"Inventaire"</a>
+        <a class="item" data-tab="features">"Classe et atouts"</a>
+        <a class="item" data-tab="spellbook">"Sorts"</a>
+        <a class="item" data-tab="biography">"Description"</a>
+    </nav>
+
+</form>

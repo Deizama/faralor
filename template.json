@@ -38,7 +38,7 @@
     }
   },
   "Item": {
-    "types": [ "weapon", "spell" ],
+    "types": [ "armes", "parchemins" ],
     "templates": {
       "rarity": {
         "rarity": "Common",
