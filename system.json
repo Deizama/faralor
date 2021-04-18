@@ -38,6 +38,54 @@
       "module": "faralor",
       "path": "packs/sorts-feu.db",
       "entity": "Item"
+    },
+	{
+      "name": "sorts-eau",
+      "label": "Sorts eau",
+      "system": "faralor",
+      "module": "faralor",
+      "path": "packs/sorts-eau.db",
+      "entity": "Item"
+    },
+	{
+      "name": "sorts-illusion",
+      "label": "Sorts illusion",
+      "system": "faralor",
+      "module": "faralor",
+      "path": "packs/sorts-illusion.db",
+      "entity": "Item"
+    },
+	{
+      "name": "sorts-nature",
+      "label": "Sorts nature",
+      "system": "faralor",
+      "module": "faralor",
+      "path": "packs/sorts-nature.db",
+      "entity": "Item"
+    },
+	{
+      "name": "sorts-reflexion",
+      "label": "Sorts reflexion",
+      "system": "faralor",
+      "module": "faralor",
+      "path": "packs/sorts-reflexion.db",
+      "entity": "Item"
+    },
+	{
+      "name": "sorts-tempete",
+      "label": "Sorts tempete",
+      "system": "faralor",
+      "module": "faralor",
+      "path": "packs/sorts-tempete.db",
+      "entity": "Item"
+    },
+	{
+      "name": "sorts-terre",
+      "label": "Sorts terre",
+      "system": "faralor",
+      "module": "faralor",
+      "path": "packs/sorts-terre.db",
+      "entity": "Item"
     }
   ],
   "languages": [  ],
