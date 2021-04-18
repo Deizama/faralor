@@ -1,4 +1,47 @@
 <form class="{{cssClass}}" autocomplete="off">
     <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="128" width="128"/>
-    <h1><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+	    {{!-- Sheet Header --}}
+    <header class="sheet-header flexrow">
+        <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
+
+        <section class="header-details flexrow">
+            <h1 class="personnage">
+                <input name="nom" type="text" value="{{actor.name}}"/>
+            </h1>
+
+            <aside class="classe flexcol">
+                <div class="classe" title="{{classeLabels}}">
+                    <label>{{data.actor.joueur.classe1}} {{data.actor.joueur.classe2}} "niveau" {{data.actor.joueur.niveau}}</label>
+                    <span class="classe">{{classLabels}}</span>
+                </div>
+
+                {{#unless disableExperience}}
+                <div class="experience flexrow">
+                    <input name="data.actor.joueur.xpactuel" type="text" value="{{data.actor.joueur.xpactuel}}" placeholder="0" data-dtype="Number"/>
+                    <span class="sep">/</span>
+                    <span class="max">{{data.actor.joueur.xpmax}}</span>
+                </div>
+                <div class="xpbar">
+                    <span class="bar" style="width: {{data.actor.joueur.xpmax / data.actor.joueur.xpactuel}}%"></span>
+                </div>
+                {{/unless}}
+            </aside>
+
+            {{!-- Character Summary --}}
+            <ul class="description flexrow">
+                <li>
+                    <input type="text" name="data.actor.joueur.race" value="{{data.actor.joueur.race}}" placeholder="elfe"/>
+                </li>
+                <li>
+                    <input type="text" name="data.actor.joueur.description.age" value="{{data.actor.joueur.description.age}}" placeholder="age"/>
+                </li>
+                <li>
+                    <input type="text" name="data.actor.joueur.description.taille" value="{{data.actor.joueur.description.taille}}" placeholder=""/>
+                </li>
+				<li>
+                    <input type="text" name="data.actor.joueur.description.poids" value="{{data.actor.joueur.description.poids}}" placeholder=""/>
+                </li>
+            </ul>
+        </section>
+    </header>
 </form>
