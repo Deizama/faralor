@@ -1,6 +1,66 @@
 {
   "Actor": {
-    "types": [ "joueur", "pnj" ]
+    "types": [ "joueur", "pnj" ],
+	"joueur": {
+	  "description":{
+		  "background": "",
+		  "age": 0,
+		  "taille": "1m50",
+		  "poids": "59kg"
+	  },
+	  "race": "Humain",
+	  "niveau": 1,
+	  "xpactuel": 0,
+	  "swag": 0,
+	  "classe1": "guerrier",
+	  "classe2": "",
+	  "pvmax": 50,
+	  "caracteristiques":{
+		  "chance": {
+			"valeur": 1,
+			"competences":{}
+		  },
+		  "force":{
+			"valeur": 1,
+			"competences":{
+			  "intimidation":"",
+			  "athletisme":""
+			}
+		  },
+		  "dexterite":{
+			"valeur": 1,
+			"competences":{
+			  "discretion":"",
+			  "acrobatie":""
+			}
+		  },
+		  "endurance":{
+			"valeur": 1,
+			"competences":{}
+		  },
+		  "intelligence":{
+			"valeur": 1,
+			"competences":{
+			  "artmagie":"",
+			  "connaissancehistoire":""
+			}
+		  },
+		  "charisme":{
+			"valeur": 1,
+			"competences":{
+			  "negociation":"",
+			  "diplomatie":""
+			}
+		  },
+		  "sagesse":{
+			"valeur": 1,
+			"competences":{
+			  "perception":"",
+			  "survie":""
+			}
+		  }
+	  }
+	}
   },
   "Item": {
     "types": [ "arme", "sort" ],
